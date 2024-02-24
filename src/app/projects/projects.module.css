@@ -1,0 +1,40 @@
+.cardContainer {
+    width: 300px;
+    height: 300px;
+
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+.cardContainer:hover > .card {
+    transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.cardFront {
+    background-color: aqua;
+}
+
+.cardBack {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform:rotateY(180deg)
+}

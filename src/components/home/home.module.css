@@ -1,0 +1,14 @@
+.greetingContainer {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    
+}
+
+.greetingContainer span {
+    color: var(--color1);
+    font-size: 20px;
+    font-weight: 700;
+}
+

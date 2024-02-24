@@ -1,0 +1,11 @@
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.aboutContainer h1 {
+    color: var(--color3);
+    font-size: 20px;
+    font-weight: 700;
+}
