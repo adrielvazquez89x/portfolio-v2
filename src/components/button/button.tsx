@@ -1,9 +1,10 @@
-import styles from './button.module.css'
+import { ReactNode } from 'react';
+import styles from './button.module.css';
 
-export default function Button({ text }: { text: string }) {
+export default function Button({ content }: { content: ReactNode }) {
     return (
         <button className={styles.btn}>
-            {text}
+            {content}
         </button>
     )
 }

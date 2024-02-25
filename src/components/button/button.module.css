@@ -1,9 +1,12 @@
 .btn{
     background-color: var(--color3);
+    display: flex;
+    justify-content: center;
     font-weight: bold;
     color: #fff;
     width: 150px;
     border-radius: 20px;
+    margin: 5px 0;
     padding: 6px;
 }
 

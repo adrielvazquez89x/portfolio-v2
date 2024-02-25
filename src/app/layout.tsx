@@ -3,7 +3,7 @@ import { Raleway } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/navbar/navbar";
 
-const raleway = Raleway({ subsets: ["latin"], weight: ['400', '700'] });
+const raleway = Raleway({ subsets: ["latin"], weight: ['400','600', '700'] });
 
 export const metadata: Metadata = {
   title: "Create Next App",

@@ -1,25 +1,23 @@
 import styles from './projects.module.css';
+import Card from '@/components/card/card';
+import projects from '../../data/projects';
+import Project from '../types/project';
 
-export default async function Projects() {
+export default function Projects() {
 
-    const res = await fetch('');
+    const sites: Project[] = projects;
 
     return (
 
-        <div className='flex sm:flex-col justify-center'>
-            {/* card */}
-            <div className={styles.cardContainer}>
-                <div className={styles.card}>
-                    <div className={styles.cardFront}>
-                        <h3>Imagen</h3>
-                    </div>
-                    <div className={styles.cardBack}>
-                        <p>Titulo</p>
-                        <p>Descripcion</p>
-                        <p>Desarralldo con</p>
-                        <p>Botones</p>
-                    </div>
-                </div>
+        <div>
+            <h1 className={styles.title}>My projects</h1>
+            <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center px-5'>
+                {
+                    sites.map((site) => (
+                        <Card project={site} key={site.id} />
+
+                    ))
+                }
             </div>
         </div>
     )

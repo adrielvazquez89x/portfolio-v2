@@ -1,71 +1,50 @@
-/* 'use client'
+'use client'
+import styles from './contact.module.css';
+import btnStyle from '../../components/button/button.module.css';
+import { useForm, ValidationError } from "@formspree/react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
-//import { useForm, ValidationError } from '@formspree/react';
-import React from 'react'
-import Button from '@/components/button/button';
 
-export default function Contact() {
 
-const formKey: string = process.env.NEXT_FORMKEY || "";
+export default function ContactForm() {
 
-const [state, handleSubmit] = useForm('xbjevjar');
+  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_ID || '');
 
   if (state.succeeded) {
-    return <p>Thanks for your message!</p>;
+    return <>
+      <p className={styles.SuccessMessage}>Thanks for your submission!</p>
+      <Link href={'/'}>
+        <button className={btnStyle.btn}>Back to home</button>
+      </Link>
+    </>
   }
 
-
   return (
-    <div>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-8'>
-        <div>
-          <h1>
-            Let's team up and make something awesome!
-          </h1>
-          <p className='text-white text-xl mb-10'>
-            No more waiting around! Let's join forces and bring your ideas to life. Get in touch with me today and let's kick-start your next project together.
-          </p>
-          <div className='flex justify-around'>
-            <Link href="https://www.linkedin.com/in/adriel-alejandro-vazquez" target="_blank">
-              icono linkedin
-            </Link>
-            <Link href="https://github.com/adrielvazquez89x" target="_blank">
-              icono githb
-            </Link>
-          </div>
-        </div>
-        <div>
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="email">Your E-mail</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-            />
-            <ValidationError
-              prefix="Email"
-              field="email"
-              errors={state.errors}
-            />
-
-            <label htmlFor="message">Message:</label>
-            <textarea
-              id="message"
-              name="message"
-              required
-            />
-            <ValidationError
-              prefix="Message"
-              field="message"
-              errors={state.errors}
-            />
-
-            <Button text="Send" type="submit" disabled={state.submitting} />
-          </form>
-        </div>
+    <div className={styles.FormContainer}>
+      <h1>Let's team up and make something awesome!</h1>
+      <p>No more waiting around! Let's join forces and bring your ideas to life</p>
+      <p>Get in touch with me today and let's kick-start your next project together</p>
+      <div className='flex justify-around'>
+        <Link href={'https://www.linkedin.com/in/adriel-alejandro-vazquez'} target='_blank'>
+          <FontAwesomeIcon icon={faLinkedin} className={styles.icons} />
+        </Link>
+        <Link href={'https://github.com/adrielvazquez89x'} target='_blank'>
+          <FontAwesomeIcon icon={faGithub} className={styles.icons} />
+        </Link>
       </div>
+
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="email">Email Address</label>
+        <input id="email" type="email" name="email" required />
+        <ValidationError prefix="Email" field="email" errors={state.errors} />
+        <textarea id="message" name="message" required />
+        <ValidationError prefix="Message" field="message" errors={state.errors} />
+        <button type="submit" className={btnStyle.btn} disabled={state.submitting}>
+          Submit
+        </button>
+        <ValidationError errors={state.errors} />
+      </form>
     </div>
   );
-};
- */
+}

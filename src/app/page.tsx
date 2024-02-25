@@ -13,10 +13,10 @@ export default function Home() {
         <Greeting />
         <div className='flex items-center justify-center gap-10'>
           <Link href={'#'}>
-            <Button text={'Contact me'} />
+            <Button content={'Contact me'} />
           </Link>
           <Link href={'#'}>
-            <Button text={'Download my CV'} />
+            <Button content={'Download my CV'} />
           </Link>
         </div>
         <Icons />

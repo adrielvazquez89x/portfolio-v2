@@ -1,0 +1,65 @@
+.cardContainer {
+    margin-bottom: 2rem;
+    width: 300px;
+    height: 300px;
+
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+.cardContainer:hover > .card {
+    transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.cardFront img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.cardBack {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform:rotateY(180deg)
+}
+
+.cardBack h3 {
+    color: var(--color1);
+    margin-bottom: 1rem;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.cardBack p {
+    font-weight: 600;
+}
+
+.icon {
+    width: 23px;
+}
+
+.btnContainer{
+    display: flex;
+    flex-direction: column;
+    
+}
