@@ -1,5 +1,5 @@
 'use client'
-import { Bars4Icon, HomeIcon, FireIcon, CommandLineIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
+import { Bars4Icon, HomeIcon, FireIcon, CommandLineIcon, EnvelopeIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import styles from './navbar.module.css';
 import Link from 'next/link';
 import React, { useState } from 'react';
@@ -31,7 +31,9 @@ export default function Navbar() {
     return (
         <div className={styles.navContainer}>
             <div className='flex justify-end pr-5 cursor-pointer'>
-                <Bars4Icon onClick={handlerClick} className="h-8 w-8 text-white" />
+                {
+                    clicked ? <XMarkIcon onClick={handlerClick} className="h-8 w-8 text-white" /> : <Bars4Icon onClick={handlerClick} className="h-8 w-8 text-white" />
+                }
             </div>
 
             <nav className={`${styles.linkContainer} ${clicked ? styles.active : ''}`}>
