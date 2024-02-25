@@ -1,8 +1,10 @@
 'use client'
-import { Bars4Icon, HomeIcon, FireIcon, CommandLineIcon, EnvelopeIcon } from '@heroicons/react/24/solid'
-import styles from './navbar.module.css'
-import Link from 'next/link'
-import React, { useState } from 'react'
+import { Bars4Icon, HomeIcon, FireIcon, CommandLineIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
+import styles from './navbar.module.css';
+import Link from 'next/link';
+import React, { useState } from 'react';
+import { usePathname } from 'next/navigation';
+
 
 
 export default function Navbar() {
@@ -20,6 +22,8 @@ export default function Navbar() {
 
     const [clicked, setClicked] = useState(false);
 
+    const pathname = usePathname();
+
     const handlerClick = () => {
         setClicked(!clicked);
     }
@@ -34,7 +38,8 @@ export default function Navbar() {
                 {links.map(link => (
                     <Link href={link.url} key={link.title}>
                         <div className='p-3 flex justify-end'>
-                            <div className='flex items-center gap-2' onClick={handlerClick}>
+                            <div className={`${styles.navLink} ${pathname == link.url ? styles.actual : ''}`} onClick={handlerClick}>
+                                {/*  */}
                                 <div>{link.title}</div>
                                 <div>{link.icon}</div>
                             </div>

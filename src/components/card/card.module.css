@@ -55,11 +55,6 @@
 }
 
 .icon {
-    width: 23px;
-}
-
-.btnContainer{
-    display: flex;
-    flex-direction: column;
-    
+    color: var(--color1);
+    width: 26px;
 }

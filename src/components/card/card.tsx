@@ -17,8 +17,8 @@ export default function Card({ project }: { project: Project }) {
                         <h3>{project.name}</h3>
                         <p>{project.description}</p>
                         <p>{project.tech}</p>
-                        <div className={styles.btnContainer}>
-                            <Button content={<FontAwesomeIcon icon={faGithub} className={styles.icon} />} />
+                        <div className='flex'>
+                            <FontAwesomeIcon icon={faGithub} className={styles.icon} />
                             <Button content='Demo' />
                         </div>
 
