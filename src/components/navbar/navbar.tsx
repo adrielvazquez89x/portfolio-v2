@@ -5,8 +5,6 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { usePathname } from 'next/navigation';
 
-
-
 export default function Navbar() {
 
     const links = [
@@ -30,7 +28,7 @@ export default function Navbar() {
 
     return (
         <div className={styles.navContainer}>
-            <div className='flex justify-end pr-5 cursor-pointer'>
+            <div className='flex md:hidden justify-end pr-5 cursor-pointer '>
                 {
                     clicked ? <XMarkIcon onClick={handlerClick} className="h-8 w-8 text-white" /> : <Bars4Icon onClick={handlerClick} className="h-8 w-8 text-white" />
                 }
@@ -40,8 +38,7 @@ export default function Navbar() {
                 {links.map(link => (
                     <Link href={link.url} key={link.title}>
                         <div className='p-3 flex justify-end'>
-                            <div className={`${styles.navLink} ${pathname == link.url ? styles.actual : ''}`} onClick={handlerClick}>
-                                {/*  */}
+                            <div className={`${styles.navLink} ${pathname == link.url ? styles.actual : ''}`}  onClick={handlerClick}>
                                 <div>{link.title}</div>
                                 <div>{link.icon}</div>
                             </div>

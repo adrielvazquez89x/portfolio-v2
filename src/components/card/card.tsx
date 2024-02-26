@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Button from '../button/button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import Link from 'next/link';
 
 export default function Card({ project }: { project: Project }) {
     return (
@@ -17,9 +18,13 @@ export default function Card({ project }: { project: Project }) {
                         <h3>{project.name}</h3>
                         <p>{project.description}</p>
                         <p>{project.tech}</p>
-                        <div className='flex'>
-                            <FontAwesomeIcon icon={faGithub} className={styles.icon} />
-                            <Button content='Demo' />
+                        <div className='flex items-center'>
+                            <Link href={project.git} target='_blank'>
+                                <FontAwesomeIcon icon={faGithub} className={styles.icon} />
+                            </Link>
+                            <Link href={project.deploy} target='_blank'>
+                                <Button content='Demo' />
+                            </Link>
                         </div>
 
                     </div>

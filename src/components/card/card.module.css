@@ -56,5 +56,9 @@
 
 .icon {
     color: var(--color1);
-    width: 26px;
+    cursor: pointer;
+    width: 30px;
+}
+.icon:hover {
+    color:var(--color4);
 }

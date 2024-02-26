@@ -22,17 +22,23 @@ export default function ContactForm() {
 
   return (
     <div className={styles.FormContainer}>
-      <h1>Let's team up and make something awesome!</h1>
-      <p>No more waiting around! Let's join forces and bring your ideas to life</p>
-      <p>Get in touch with me today and let's kick-start your next project together</p>
-      <div className='flex justify-around'>
-        <Link href={'https://www.linkedin.com/in/adriel-alejandro-vazquez'} target='_blank'>
-          <FontAwesomeIcon icon={faLinkedin} className={styles.icons} />
-        </Link>
-        <Link href={'https://github.com/adrielvazquez89x'} target='_blank'>
-          <FontAwesomeIcon icon={faGithub} className={styles.icons} />
-        </Link>
+      <div>
+        <div>
+          <h1>Let's team up and make something awesome!</h1>
+          <p> No more waiting around! Let's join forces and bring your ideas to life
+            Get in touch with me today and let's kick-start your next project together </p>
+        </div>
+        <div className='flex justify-around'>
+          <Link href={'https://www.linkedin.com/in/adriel-alejandro-vazquez'} target='_blank'>
+            <FontAwesomeIcon icon={faLinkedin} className={styles.icons} />
+          </Link>
+          <Link href={'https://github.com/adrielvazquez89x'} target='_blank'>
+            <FontAwesomeIcon icon={faGithub} className={styles.icons} />
+          </Link>
+        </div>
+
       </div>
+
 
       <form onSubmit={handleSubmit}>
         <label htmlFor="email">Email Address</label>

@@ -18,13 +18,13 @@
     background-color: rgba(18, 18, 28, 0.99);
     color: var(--color3);
     height: 100%;
-    
+    font-size: 22px;
     padding: 5rem 3rem 0 0;
-
+    /*  */
     position: fixed;
     top: 0;
     left: -100%;
-    z-index: 1;
+    z-index: 1; 
 
     transition: left 0.4s ease;
 
@@ -37,7 +37,9 @@
     padding: 2px 8px;
     border-radius: 15px;
 }
-
+.navLink:hover {
+    color: var(--color4);
+}
 .actual {
     color: var(--color2);
     background-color: var(--color3);
@@ -50,6 +52,13 @@
 
 @media(min-width: 768px) {
     .active {
-        width: 35%;
+        width: 100%;
+    }
+    .linkContainer {
+        background-color: var(--color2);
+        display: flex;
+        justify-content: center;
+        position: inherit;
+        padding: 0;
     }
 }
