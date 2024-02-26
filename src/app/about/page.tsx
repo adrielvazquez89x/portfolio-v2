@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import profile from '../../../public/img/profile2.jpg';
-import styles from './about.module.css';
+import Image from "next/image";
+import profile from "../../../public/img/profile2.jpg";
+import styles from "./about.module.css";
 
 export default function About() {
     return (
@@ -21,14 +21,14 @@ export default function About() {
                     <p>
                         I find web development incredibly fun and fulfilling.
                         Outside of coding, I have a passion for music and I play the guitar. Video games are also a big part of my life.
-                        My main goal is to land a job in web development and keep pushing my skills to the next level. If you're looking for a dedicated and enthusiastic web developer, I&apos;d love to connect!
+                        My main goal is to land a job in web development and keep pushing my skills to the next level. If you"re looking for a dedicated and enthusiastic web developer, I&apos;d love to connect!
                         Feel free to reach out if you have any questions or exciting projects in mind.
                     </p>
                 </div>
             </div>
             <div className="lg:w-1/2 m-auto lg:items-center">
                 <Image src={profile} width={960} height={645} alt="" />
-                <p className='text-white text-xs'>This is me, playing guitar in my previous band</p>
+                <p className="text-white text-xs">This is me, playing guitar in my previous band</p>
             </div>
         </div>
     );

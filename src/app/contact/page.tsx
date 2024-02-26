@@ -1,20 +1,20 @@
-'use client'
-import styles from './contact.module.css';
-import btnStyle from '../../components/button/button.module.css';
+"use client"
+import styles from "./contact.module.css";
+import btnStyle from "../../components/button/button.module.css";
 import { useForm, ValidationError } from "@formspree/react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import Link from 'next/link';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
 
 
 export default function ContactForm() {
 
-  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_ID || '');
+  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_ID || "");
 
   if (state.succeeded) {
     return <>
       <p className={styles.SuccessMessage}>Thanks for your submission!</p>
-      <Link href={'/'}>
+      <Link href={"/"}>
         <button className={btnStyle.btn}>Back to home</button>
       </Link>
     </>
@@ -28,11 +28,11 @@ export default function ContactForm() {
           <p> No more waiting around! Let's join forces and bring your ideas to life
             Get in touch with me today and let's kick-start your next project together </p>
         </div>
-        <div className='flex justify-around'>
-          <Link href={'https://www.linkedin.com/in/adriel-alejandro-vazquez'} target='_blank'>
+        <div className="flex justify-around">
+          <Link href={"https://www.linkedin.com/in/adriel-alejandro-vazquez"} target="_blank">
             <FontAwesomeIcon icon={faLinkedin} className={styles.icons} />
           </Link>
-          <Link href={'https://github.com/adrielvazquez89x'} target='_blank'>
+          <Link href={"https://github.com/adrielvazquez89x"} target="_blank">
             <FontAwesomeIcon icon={faGithub} className={styles.icons} />
           </Link>
         </div>
