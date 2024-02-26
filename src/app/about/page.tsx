@@ -21,7 +21,7 @@ export default function About() {
                     <p>
                         I find web development incredibly fun and fulfilling.
                         Outside of coding, I have a passion for music and I play the guitar. Video games are also a big part of my life.
-                        My main goal is to land a job in web development and keep pushing my skills to the next level. If you"re looking for a dedicated and enthusiastic web developer, I&apos;d love to connect!
+                        My main goal is to land a job in web development and keep pushing my skills to the next level. If you &apos;re looking for a dedicated and enthusiastic web developer, I&apos;d love to connect!
                         Feel free to reach out if you have any questions or exciting projects in mind.
                     </p>
                 </div>

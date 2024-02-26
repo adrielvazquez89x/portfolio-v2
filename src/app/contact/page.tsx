@@ -24,9 +24,9 @@ export default function ContactForm() {
     <div className={styles.FormContainer}>
       <div>
         <div>
-          <h1>Let's team up and make something awesome!</h1>
-          <p> No more waiting around! Let's join forces and bring your ideas to life
-            Get in touch with me today and let's kick-start your next project together </p>
+          <h1>Let&apos;s team up and make something awesome!</h1>
+          <p> No more waiting around! Let&apos;s join forces and bring your ideas to life
+            Get in touch with me today and let&apos;s kick-start your next project together </p>
         </div>
         <div className="flex justify-around">
           <Link href={"https://www.linkedin.com/in/adriel-alejandro-vazquez"} target="_blank">
