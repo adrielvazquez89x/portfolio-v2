@@ -5,7 +5,7 @@ interface Project {
     git: string;
     deploy: string;
     img: string;
-    tech: string;
+    tech: string[];
 }
 
 export default Project

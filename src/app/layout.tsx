@@ -7,7 +7,7 @@ const raleway = Raleway({ subsets: ["latin"], weight: ["400", "600", "700"] });
 
 export const metadata: Metadata = {
   title: "Adriel Vazquez - Fullstack developer",
-  description: "Hey! Let's build something together",
+  description: "Hey! Let's build an app together",
   
 };
 

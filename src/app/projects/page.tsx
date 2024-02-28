@@ -7,9 +7,9 @@ import { sql } from "@vercel/postgres";
 export default async function Projects() {
 
     const { rows } = await sql`SELECT * FROM projects`;
-
+    
     const projects: Project[] = [];
-
+    
     for (const item of rows) {
         let aux: Project = {
             id: item.id,
@@ -18,12 +18,13 @@ export default async function Projects() {
             git: item.giturl,
             deploy: item.deployurl,
             img: item.imgurl,
-            tech: item.tech
+            tech: item.tech.split(",")
         }
         projects.push(aux);
-        
     }
-
+    
+    //console.log(projects);
+    
     return (
 
         <div>
