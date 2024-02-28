@@ -40,7 +40,7 @@ export default function Techs({ project }: { project: string[] }) {
 
     return (
         <div className="flex">
-            {projectTechs.map((link) => <Image src={link} width={32} height={32} alt="tech" className="mx-1 mb-5" />)}
+            {projectTechs.map((link, index) => <Image src={link} width={32} height={32} alt="tech" className="mx-1 mb-5" key={index} />)}
         </div>
     )
 }
