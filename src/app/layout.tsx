@@ -7,8 +7,8 @@ const raleway = Raleway({ subsets: ["latin"], weight: ["400", "600", "700"] });
 
 export const metadata: Metadata = {
   title: "Adriel Vazquez - Fullstack developer",
-  description: "Hey! Let's build an app together",
-  
+  description: "Hey Adriel here! I'm a Fullstack developer, let's build an app together",
+
 };
 
 export default function RootLayout({
@@ -19,6 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.adrielvazquez.com.ar" />
+        <meta property="og:title" content="Adriel Vazquez - Fullstack developer" />
+        <meta property="og:description" content= "Hey Adriel here! I'm a Fullstack developer, let's build an app together" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={`${raleway.className} antialiased`}>
