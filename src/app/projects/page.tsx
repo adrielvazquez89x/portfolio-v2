@@ -23,12 +23,15 @@ export default async function Projects() {
         projects.push(aux);
     }
     
-    //console.log(projects);
+    console.log(rows);
     
     return (
 
         <div>
             <h1 className={styles.title}>My projects</h1>
+
+            
+
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center px-5">
                 {
                     projects.map((site) => (
