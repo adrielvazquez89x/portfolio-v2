@@ -1,16 +1,16 @@
-'use client';
-import { useEffect, useState } from 'react';
+"use client";
+import { useEffect, useState } from "react";
 import styles from "./projects.module.css";
 import Card from "@/components/card/card";
 import Project from "../types/project"; // Adjust the import path
 import ButtonType from "../types/buttonTech"; // Adjust the import path
-import ButtonTech from '@/components/buttonTech/buttonTech';
+import ButtonTech from "@/components/buttonTech/buttonTech";
 import CS from "../../../public/img/filters/CS.png";
 import CPP from "../../../public/img/filters/CPP.png";
 import ReactImg from "../../../public/img/filters/ReactJS.png"; // Adjusted import name
 import HTML from "../../../public/img/filters/HTML.png";
 import AllTechs from "../../../public/img/filters/allTechs.png";
-import Spinner from '@/components/spinner/spinner';
+import Spinner from "@/components/spinner/spinner";
 
 export default function Projects() {
     //Buttons
@@ -33,7 +33,7 @@ export default function Projects() {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const res = await fetch('/api/projects');
+                const res = await fetch("/api/projects");
                 if (!res.ok) {
                     throw new Error(`HTTP error! Status: ${res.status}`);
                 }
@@ -41,7 +41,7 @@ export default function Projects() {
                 setProjects(data);
                 setFilteredProjects(data);
             } catch (error) {
-                console.error('Failed to fetch projects:', error);
+                console.error("Failed to fetch projects:", error);
             }
             finally {
                 setLoading(false);
@@ -84,9 +84,9 @@ export default function Projects() {
         <div>
             <h1 className={styles.title}>My projects</h1>
 
-            <div className='text-center flex flex-col items-center mb-8'>
-                <h1 className='text-white'>Technologies</h1>
-                <div className='flex gap-3'>
+            <div className="text-center flex flex-col items-center mb-8">
+                <h1 className="text-white">Technologies</h1>
+                <div className="flex gap-3">
                     {
                         techs.map((tech) => <ButtonTech
                             key={tech.name}
@@ -97,7 +97,7 @@ export default function Projects() {
                         />)
                     }
                     <div>
-                        <ButtonTech route={CPP.src} altText='C++' onClick={() => clearFilters()} />
+                        <ButtonTech route={AllTechs.src} altText="Clear filters" onClick={() => clearFilters()} />
                     </div>
                 </div>
             </div>

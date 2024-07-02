@@ -1,4 +1,4 @@
-'use client'
+use client"
 import html5 from "../../../public/img/icons/html.png";
 import css3 from "../../../public/img/icons/css.png";
 import JS from "../../../public/img/icons/js.png";
