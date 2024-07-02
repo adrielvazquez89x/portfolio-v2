@@ -7,13 +7,14 @@ export default function Greeting() {
             <p>
                 My focus is on continuous learning and growth
                 across various programming domains, particularly in web development
-                where I specialize in technologies like React.
+                where I specialize in technologies like React and C#/.NET.
                 Additionally, I&apos;m expanding my expertise into backend technologies.
             </p>
             <p>
                 Apart from web development,
-                I&apos;m delving into programming in general,
-                eager to broaden my skill set and take on new challenges.
+                I&apos;m delving into programming in general and have ventured
+                into game development using C++.
+                I&apos;m eager to broaden my skill set and take on new challenges.
             </p>
             <p>
                 I aspire to secure a position where
