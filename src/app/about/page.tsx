@@ -9,7 +9,7 @@ export default function About() {
                 <div className={styles.aboutContainer}>
                     <h1>Discover More About Me</h1>
                     <p>
-                        I&apos;m Adriel Alejandro Vazquez, and I&apos;coursing the first year of the
+                        I&apos;m Adriel Alejandro Vazquez, and I&apos;m in the first year of the
                         <i>Técnico Universitario en Programación</i> degree at <i>Universidad Tecnológica Nacional</i> (UTN) with outstanding grades.
                         I also undertook several development courses to expand my knowledge in this field.
                     </p>
