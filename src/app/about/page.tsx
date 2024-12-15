@@ -9,15 +9,16 @@ export default function About() {
                 <div className={styles.aboutContainer}>
                     <h1>Discover More About Me</h1>
                     <p>
-                        I&apos;m Adriel Alejandro Vazquez, and I&apos;coursing the first year of the
+                        I&apos;m Adriel Alejandro Vazquez, and I&apos;m in the last year of the
                         <i>Técnico Universitario en Programación</i> degree at <i>Universidad Tecnológica Nacional</i> (UTN) with outstanding grades.
                         I also undertook several development courses to expand my knowledge in this field.
                     </p>
                     <p>
                         Perseverance is key for me. Although I don&apos;t have professional experience yet, I&apos;m determined to learn
                         and grow in the development field.
-                        When it comes to tech, React is my go-to tool. I&apos;m well-versed in HTML, CSS, and JS too. Additionally,
-                        I handle .NET technology proficiently, which has truly captivated me with its versatility and potential.
+                        When it comes to tech, React is my go-to tool. I&apos;m well-versed in HTML, CSS, and JS/TS too. Additionally,
+                        I have become quite proficient in .NET technology, and over time, its versatility and potential have fascinated me even more.
+                        I now have a deep appreciation for how much it allows me to create powerful and scalable solutions.
                     </p>
                     <p>
                         I find development incredibly fun and fulfilling.

@@ -8,7 +8,7 @@ export default function Greeting() {
                 My focus is on continuous learning and growth
                 across various programming domains, particularly in web development
                 where I specialize in technologies like React and C#/.NET.
-                Additionally, I&apos;m expanding my expertise into backend technologies.
+                
             </p>
             <p>
                 Apart from web development,

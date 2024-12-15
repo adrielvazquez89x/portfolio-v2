@@ -3,7 +3,7 @@ import { sql } from "@vercel/postgres";
 
 export async function GET() {
     try {
-        const { rows } = await sql`SELECT * FROM projects`;
+        const { rows } = await sql`Select * from Projects order by Id desc`;
         const projects = rows.map((item) => ({
             id: item.id,
             name: item.name,
@@ -13,6 +13,7 @@ export async function GET() {
             img: item.imgurl,
             tech: item.tech.split(","),
         }));
+        console.log(projects);
         return NextResponse.json(projects);
     } catch (error) {
         console.error("Error fetching projects:", error);
